@@ -223,7 +223,7 @@ export default () => {
         <Show when={isLogin() && user().nickname}>
           <p mt-1 op-60>
             您好{user().nickname}, 您本月剩余额度{user().times}次
-            <span onClick={() => { setShowCharge(true) }} class="border-1 px-2 py-1 ml-2 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">充值</span>
+            {/* <span onClick={() => { setShowCharge(true) }} class="border-1 px-2 py-1 ml-2 rounded-md transition-colors bg-slate/20 cursor-pointer hover:bg-slate/50">充值</span> */}
           </p>
         </Show>
       </div>
@@ -237,14 +237,14 @@ export default () => {
         />
       </Show>
 
-      <Show when={showCharge()}>
+      {/* <Show when={showCharge()}>
         <Charge
           showCharge={showCharge}
           setShowCharge={setShowCharge}
           user={user}
           setUser={setUser}
         />
-      </Show>
+      </Show> */}
 
       <Show when={isLogin()}>
         <div onClick={randQuestion}>
